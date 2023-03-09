@@ -1,0 +1,19 @@
+<div class="p-3">
+  <button class="bg-light-blue-400 hover:bg-light-blue-600 text-white py-2 px-4 rounded-md mr-2" (click)="addEntry()">Add</button>
+  <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md" (click)="removeEntry()">Remove</button>
+</div>
+
+<table class="table-fixed w-full text-center bg-gray-100">
+    <thead>
+      <tr>
+        <th class="border-2 border-light-red-400">Localização</th>
+        <th class="border-2 border-light-red-400">Temperatura</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let temp of temperaturas">
+        <td class="border-2 border-light-red-400">{{temp.nomeDivisao}}</td>
+        <td class="border-2 border-light-red-400">{{temp.temperatura}}º C</td>
+      </tr>
+    </tbody>
+  </table>
